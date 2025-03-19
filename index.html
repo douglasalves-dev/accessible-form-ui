@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+
+    <form method="post" class="form">
+
+        <fieldset class="form__fields" aria-label="Profile Information">
+
+            <label for="name" class="form__label">
+                Full Name
+                <input type="text" name="name" id="name" class="form__input" aria-required="true" placeholder="What should we call you?">
+                <div class="form__error-message" role="alert" aria-live="assertive"></div>
+            </label>
+
+            <label for="email" class="form__label">
+                Email
+                <input type="email" name="email" id="email" aria-required="true" aria-invalid="true" class="form__input" value="john@doe.com" placeholder="Enter your email address">
+                <div class="form__error-message" role="alert" aria-live="assertive">
+                    Email is already taken
+                </div>
+            </label>
+
+            <label for="password" class="form__label">
+                Enter Password
+                <input type="password" name="password" id="password" aria-required="true" class="form__input" placeholder="Enter your password">
+                <div class="form__error-message" role="alert" aria-live="assertive"></div>
+            </label>
+            
+            <label for="password-conform" class="form__label">
+                Confirm Password
+                <input type="password" name="password" id="password-confirmation" aria-required="true" class="form__input" placeholder="Repeat your password">
+                <div class="form__error-message" role="alert" aria-live="assertive"></div>
+            </label>
+
+            <input type="submit" value="Update Profile" class="form__submit">
+
+        </fieldset>
+
+        <fieldset class="form-completeness">
+
+            <legend class="form-completeness__title">Profile Completeness</legend>
+
+            <div class="form-completeness__progress-bar" aria-label="Progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65">
+                <div class="form-completeness__percentage" aria-hidden="true">65%</div>
+            </div>
+
+            <ul class="form-completeness__list" role="list">
+                <li class="form-completeness__item form-completeness__item--checked">Creat Account</li>
+                <li class="form-completeness__item form-completeness__item--checked">Update Roadmap</li>
+                <li class="form-completeness__item form-completeness__item--checked">Setup Public Profile</li>
+                <li class="form-completeness__item" aria-current="step">Complete your first project</li>
+                <li class="form-completeness__item">Invite your Friends</li>
+            </ul>
+   
+        </fieldset>
+
+
+    </form>
+    
+</body>
+</html>
