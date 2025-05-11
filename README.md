@@ -6,5 +6,7 @@ This project is a form UI using only HTML and CSS, created for the Frontend Deve
 
 creating an accessible form UI using only HTML and CSS that is easy to use for all users, including those with disabilities.
 
+## Project Preview
 
+Check it out [here](https://douglasalves-dev.github.io/accessible-form-ui/) to see the project.
 
